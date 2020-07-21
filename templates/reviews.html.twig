@@ -1,0 +1,23 @@
+{% if lastReviews|length %}
+	<section class="opiniones-guardianes">
+		<div class="opiniones-titulo">
+			<p>Opiniones de otros guardianes</p>
+		</div>
+
+		<article class="opiniones">
+			{% for item in lastReviews %}
+				<div class="opinion">
+					<div class="opinion-texto">
+						{{ item.comment }}
+					</div>
+					<div class="opinion-autor">
+						<p>{{ item.author }}</p>
+					</div>
+					<div class="opinion-lugar">
+						{{ item.location }}
+					</div>
+				</div>
+			{% endfor %}
+		</article>
+	</section>
+{% endif %}

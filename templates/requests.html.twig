@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+	{% if requests|length %}
+		<h1>Solicitudes de usuarios:</h1>
+		<br>
+		<hr>
+		<br>
+		{% for item in requests %}
+			<section>
+				<p>Nombre:
+					{{item.name}}</p>
+			</section>
+			<br>
+			<br>
+			<section>
+				<p>Email:
+					{{item.email}}</p>
+			</section>
+			<br>
+			<br>
+			<section>
+				<p>Ciudad:
+					{{item.city}}</p>
+			</section>
+			<br>
+			<hr>
+			<br>
+		{% endfor %}
+	{% endif %}
+{% endblock %}
